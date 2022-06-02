@@ -43,7 +43,10 @@ sleep 3
 
 if [ -f "${CONFIG}" ]
 then
-    printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] ${CONFIG} exists already\n"
+    printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] The file ${CONFIG} exists already\n"
+    printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] Please either back up the version already there or remove it\n"
+    #TODO: possibly look into prompting the user if they want to backup the version already there and then write over it 
+    #      or if the user would like to just append to the end of the existing file
 else
     printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] The file ${CONFIG} does not yet exist\n"
     sleep 3
@@ -59,6 +62,3 @@ else
         printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] The file ${CONFIG} has been created successfully\n"
     fi    
 fi
-    # prompt user if they would like to append to the existing $CONFIG
-    # or if they would like to backup the existing $CONFIG
-    # or if they would like to just overwrite the existing $CONFIG
