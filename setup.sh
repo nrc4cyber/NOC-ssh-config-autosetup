@@ -1,7 +1,7 @@
 FOLDER=${HOME}/.ssh
 CONFIG=${FOLDER}/config
 SSH_CONFIG_TEXT="MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-sha2-512
-HostkeyAlgorithms ssh-dss,ssh-rsa
+HostkeyAlgorithms ssh-dss,ssh-rsa,rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
 ServerAliveInterval 30
 StrictHostKeyChecking=accept-new
 KexAlgorithms +diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
