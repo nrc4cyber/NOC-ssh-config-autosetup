@@ -11,8 +11,8 @@ GREEN_ON="\033[32m"
 YELLOW_ON="\033[33m"
 RED_ON="\033[31m"
 
-FOLDER=./test_folder  #DEBUG
-CONFIG=${FOLDER}/test_config  #DEBUG
+#FOLDER=./test_folder  #DEBUG
+#CONFIG=${FOLDER}/test_config  #DEBUG
 
 clear
 printf "
