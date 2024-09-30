@@ -22,11 +22,11 @@ sleep 5
 # Check to see if the folder exists and if so echo a status message to the user
 if [ -d "${FOLDER}" ]
 then
-    printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] ${FOLDER} exists already\n"
+    printf "[✓] ${FOLDER} exists already\n"
 else
     printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] ${FOLDER} does not exist\n"
     sleep 3
-    printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] Creating the folder ${FOLDER} now\n"
+    printf "[✓] Creating the folder ${FOLDER} now\n"
     mkdir ${FOLDER}
     FOLDER_EXIT_CODE=$?
     if [ ${FOLDER_EXIT_CODE} -ne 0 ]
@@ -35,7 +35,7 @@ else
         exit ${FOLDER_EXIT_CODE}
     else
         sleep 2
-        printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] The folder ${FOLDER} has been created successfully\n"
+        printf "[✓] The folder ${FOLDER} has been created successfully\n"
     fi
 fi
 
@@ -50,7 +50,7 @@ then
 else
     printf "[${YELLOW_ON}!${DEFAULT_COLOR_FG}] The file ${CONFIG} does not yet exist\n"
     sleep 3
-    printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] Creating the file ${CONFIG} now\n"
+    printf "[✓] Creating the file ${CONFIG} now\n"
     echo "${SSH_CONFIG_TEXT}" > ${CONFIG}
     CONFIG_EXIT_CODE=$?
     if [ ${CONFIG_EXIT_CODE} -ne 0 ]
@@ -59,6 +59,6 @@ else
         exit ${CONFIG_EXIT_CODE}
     else
         sleep 2
-        printf "[${GREEN_ON}i${DEFAULT_COLOR_FG}] The file ${CONFIG} has been created successfully\n"
+        printf "[✓] The file ${CONFIG} has been created successfully\n"
     fi    
 fi
